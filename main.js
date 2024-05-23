@@ -11,8 +11,8 @@ let map = L.map("map", {
     fullscreenControl: true
 }).setView([ibk.lat, ibk.lng], 9);
 
-var minimap = new L.Map('minimap', {worldMiniMapControl: true});
-var worldMiniMap = L.control.worldMiniMap({position: 'topright', style: {opacity: 0.9, borderRadius: '0px', backgroundColor: 'lightblue'}}).addTo(map);
+var minimap = new L.minimap("minimap", {worldMiniMapControl: true});
+var worldMiniMap = L.control.worldMiniMap({position: "topright", style: {opacity: 0.9, borderRadius: "0px", backgroundColor: "lightblue"}}).addTo(map);
 
 // thematische Layer
 let themaLayer = {
