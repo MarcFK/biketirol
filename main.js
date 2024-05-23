@@ -92,5 +92,5 @@ pulldown.onchange = function(evt) {
 new L.Control.Minimap(L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
     attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
 }), {
-    toggleDisplay: true
-}).addTo(map)
+    toggleDisplay: true,
+}).addTo(map);
