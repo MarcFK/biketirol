@@ -11,9 +11,6 @@ let map = L.map("map", {
     fullscreenControl: true
 }).setView([ibk.lat, ibk.lng], 9);
 
-var minimap = new L.minimap("minimap", {worldMiniMapControl: true});
-var worldMiniMap = L.control.worldMiniMap({position: "topright", style: {opacity: 0.9, borderRadius: "0px", backgroundColor: "lightblue"}}).addTo(map);
-
 // thematische Layer
 let themaLayer = {
     route: L.featureGroup(),
@@ -90,3 +87,9 @@ pulldown.onchange = function(evt) {
     let url = `https://${username}.github.io/biketirol`;
     window.location.href = url;
 }
+
+new L.Control.Minimap(L.tileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png", {
+    attribution: `Datenquelle: <a href="https://www.data.gv.at/katalog/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>`
+}), {
+    toggleDisplay: true
+}).addTo(map)
