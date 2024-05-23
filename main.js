@@ -87,3 +87,6 @@ pulldown.onchange = function(evt) {
     let url = `https://${username}.github.io/biketirol`;
     window.location.href = url;
 }
+
+var minimap = new L.Map('minimap', {worldMiniMapControl: true});
+var worldMiniMap = L.control.worldMiniMap({position: 'topright', style: {opacity: 0.9, borderRadius: '0px', backgroundColor: 'lightblue'}}).addTo(map);
