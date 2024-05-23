@@ -85,7 +85,5 @@ pulldown.onchange = function(evt) {
     // console.log("User: ", evt.target.value);
     let username = evt.target.value;
     let url = `https://${username}.github.io/biketirol`;
-    console.log("Url: ", url);
-    console.log(window.location);
     window.location.href = url;
 }
