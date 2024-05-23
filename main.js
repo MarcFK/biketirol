@@ -58,4 +58,10 @@ L.control.scale({
     imperial: false,
 }).addTo(map);
 
-let controlElevation = L.control.elevation{()}
+let controlElevation = L.control.elevation({
+    time:false,
+    elevationDiv: "#profile",
+    height: 300,
+
+}).addTo(map);
+controlElevation.load("data/etappe25.gpx");
